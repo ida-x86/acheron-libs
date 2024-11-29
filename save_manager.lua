@@ -127,7 +127,7 @@ local SaveManager = {} do
 
 	function SaveManager:IgnoreThemeSettings()
 		self:SetIgnoreIndexes({ 
-			"InterfaceTheme", "AcrylicToggle", "TransparentToggle", "MenuKeybind"
+			"acheronTheme", "AcrylicToggle", "TransparentToggle", "MenuKeybind"
 		})
 	end
 
@@ -185,16 +185,16 @@ local SaveManager = {} do
 			local success, err = self:Load(name)
 			if not success then
 				return self.Library:Notify({
-					Title = "Interface",
-					Content = "Config loader",
+					Title = "acheron",
+					Content = "config",
 					SubContent = "Failed to load autoload config: " .. err,
 					Duration = 7
 				})
 			end
 
 			self.Library:Notify({
-				Title = "Interface",
-				Content = "Config loader",
+				Title = "acheron",
+				Content = "config",
 				SubContent = string.format("Auto loaded config %q", name),
 				Duration = 7
 			})
@@ -216,8 +216,8 @@ local SaveManager = {} do
 
                 if name:gsub(" ", "") == "" then 
                     return self.Library:Notify({
-						Title = "Interface",
-						Content = "Config loader",
+						Title = "acheron",
+						Content = "config",
 						SubContent = "Invalid config name (empty)",
 						Duration = 7
 					})
@@ -226,16 +226,16 @@ local SaveManager = {} do
                 local success, err = self:Save(name)
                 if not success then
                     return self.Library:Notify({
-						Title = "Interface",
-						Content = "Config loader",
+						Title = "acheron",
+						Content = "config",
 						SubContent = "Failed to save config: " .. err,
 						Duration = 7
 					})
                 end
 
 				self.Library:Notify({
-					Title = "Interface",
-					Content = "Config loader",
+					Title = "acheron",
+					Content = "config",
 					SubContent = string.format("Created config %q", name),
 					Duration = 7
 				})
@@ -251,16 +251,16 @@ local SaveManager = {} do
 			local success, err = self:Load(name)
 			if not success then
 				return self.Library:Notify({
-					Title = "Interface",
-					Content = "Config loader",
+					Title = "acheron",
+					Content = "config",
 					SubContent = "Failed to load config: " .. err,
 					Duration = 7
 				})
 			end
 
 			self.Library:Notify({
-				Title = "Interface",
-				Content = "Config loader",
+				Title = "acheron",
+				Content = "config",
 				SubContent = string.format("Loaded config %q", name),
 				Duration = 7
 			})
@@ -272,16 +272,16 @@ local SaveManager = {} do
 			local success, err = self:Save(name)
 			if not success then
 				return self.Library:Notify({
-					Title = "Interface",
-					Content = "Config loader",
+					Title = "acheron",
+					Content = "config",
 					SubContent = "Failed to overwrite config: " .. err,
 					Duration = 7
 				})
 			end
 
 			self.Library:Notify({
-				Title = "Interface",
-				Content = "Config loader",
+				Title = "acheron",
+				Content = "config",
 				SubContent = string.format("Overwrote config %q", name),
 				Duration = 7
 			})
@@ -298,8 +298,8 @@ local SaveManager = {} do
 			writefile(self.Folder .. "/settings/autoload.txt", name)
 			AutoloadButton:SetDesc("Current autoload config: " .. name)
 			self.Library:Notify({
-				Title = "Interface",
-				Content = "Config loader",
+				Title = "acheron",
+				Content = "config",
 				SubContent = string.format("Set %q to auto load", name),
 				Duration = 7
 			})
