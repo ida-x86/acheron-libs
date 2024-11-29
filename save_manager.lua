@@ -284,10 +284,10 @@ local SaveManager = {} do
 		end})
 
 		local AutoloadButton
-		AutoloadButton = section:AddButton({Title = "set as autoload", Description = "Current autoload config: none", Callback = function()
+		AutoloadButton = section:AddButton({Title = "set as autoload", Description = "current autoload config: none", Callback = function()
 			local name = SaveManager.Options.SaveManager_ConfigList.Value
 			writefile(self.Folder .. "/settings/autoload.txt", name)
-			AutoloadButton:SetDesc("Current autoload config: " .. name)
+			AutoloadButton:SetDesc("current autoload config: " .. name)
 			self.Library:Notify({
 				Title = "acheron",
 				Content = string.format("set %q to auto load", name),
