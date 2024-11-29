@@ -204,7 +204,7 @@ local SaveManager = {} do
 	function SaveManager:BuildConfigSection(tab)
 		assert(self.Library, "Must set SaveManager.Library")
 
-		local section = tab:AddSection("configuration")
+		local section = tab:AddSection("config")
 
 		section:AddInput("SaveManager_ConfigName",    { Title = "config name" })
 		section:AddDropdown("SaveManager_ConfigList", { Title = "config list", Values = self:RefreshConfigList(), AllowNull = true })
@@ -307,7 +307,7 @@ local SaveManager = {} do
 
 		if isfile(self.Folder .. "/settings/autoload.txt") then
 			local name = readfile(self.Folder .. "/settings/autoload.txt")
-			AutoloadButton:SetDesc("Current autoload config: " .. name)
+			AutoloadButton:SetDesc("current autoload config: " .. name)
 		end
 
 		SaveManager:SetIgnoreIndexes({ "SaveManager_ConfigList", "SaveManager_ConfigName" })
