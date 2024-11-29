@@ -186,16 +186,14 @@ local SaveManager = {} do
 			if not success then
 				return self.Library:Notify({
 					Title = "acheron",
-					Content = "config",
-					SubContent = "Failed to load autoload config: " .. err,
+					Content = "failed to load autoload config: " .. err,
 					Duration = 7
 				})
 			end
 
 			self.Library:Notify({
 				Title = "acheron",
-				Content = "config",
-				SubContent = string.format("Auto loaded config %q", name),
+				Content = string.format("auto loaded config %q", name),
 				Duration = 7
 			})
 		end
@@ -217,8 +215,7 @@ local SaveManager = {} do
                 if name:gsub(" ", "") == "" then 
                     return self.Library:Notify({
 						Title = "acheron",
-						Content = "config",
-						SubContent = "Invalid config name (empty)",
+						Content = "invalid config name (empty)",
 						Duration = 7
 					})
                 end
@@ -227,16 +224,14 @@ local SaveManager = {} do
                 if not success then
                     return self.Library:Notify({
 						Title = "acheron",
-						Content = "config",
-						SubContent = "Failed to save config: " .. err,
+						Content = "failed to save config: " .. err,
 						Duration = 7
 					})
                 end
 
 				self.Library:Notify({
 					Title = "acheron",
-					Content = "config",
-					SubContent = string.format("Created config %q", name),
+					Content = string.format("created config %q", name),
 					Duration = 7
 				})
 
@@ -252,16 +247,14 @@ local SaveManager = {} do
 			if not success then
 				return self.Library:Notify({
 					Title = "acheron",
-					Content = "config",
-					SubContent = "Failed to load config: " .. err,
+					Content = "failed to load config: " .. err,
 					Duration = 7
 				})
 			end
 
 			self.Library:Notify({
 				Title = "acheron",
-				Content = "config",
-				SubContent = string.format("Loaded config %q", name),
+				Content = string.format("loaded config %q", name),
 				Duration = 7
 			})
 		end})
@@ -273,16 +266,14 @@ local SaveManager = {} do
 			if not success then
 				return self.Library:Notify({
 					Title = "acheron",
-					Content = "config",
-					SubContent = "Failed to overwrite config: " .. err,
+					Content = "failed to overwrite config: " .. err,
 					Duration = 7
 				})
 			end
 
 			self.Library:Notify({
 				Title = "acheron",
-				Content = "config",
-				SubContent = string.format("Overwrote config %q", name),
+				Content = string.format("overwrote config %q", name),
 				Duration = 7
 			})
 		end})
@@ -299,8 +290,7 @@ local SaveManager = {} do
 			AutoloadButton:SetDesc("Current autoload config: " .. name)
 			self.Library:Notify({
 				Title = "acheron",
-				Content = "config",
-				SubContent = string.format("Set %q to auto load", name),
+				Content = string.format("set %q to auto load", name),
 				Duration = 7
 			})
 		end})
