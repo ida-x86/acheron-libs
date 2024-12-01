@@ -1,3 +1,6 @@
 return {
-  "FB48DF04-C3B5-4A1C-AC47-9CFCA5E629E2",
+  [1] = {
+    ["KEY"] = "Zh1jem8ABcVdPtoxsb1scvt1i4usVIUI"
+    ["HWID"] = "FB48DF04-C3B5-4A1C-AC47-9CFCA5E629E2",
+  }
 }
