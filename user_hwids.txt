@@ -2,5 +2,9 @@ return {
   [1] = {
     ["KEY"] = "Zh1jem8ABcVdPtoxsb1scvt1i4usVIUI",
     ["HWID"] = "FB48DF04-C3B5-4A1C-AC47-9CFCA5E629E2",
+  },
+  [2] = {
+    ["KEY"] = "3rMzAHe33HK9s6V5wPSYcbSblf0TXDwI",
+    ["HWID"] = "6746181C-8413-4122-A3B1-6C6116675914",
   }
 }
